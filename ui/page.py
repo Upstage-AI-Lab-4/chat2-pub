@@ -1,5 +1,6 @@
 import gradio as gr
 import time
+from typing import Callable, Any
 
 def echo(message, history, system_prompt, tokens):
     response = f"System prompt: {system_prompt}\n Message: {message}."
@@ -7,12 +8,10 @@ def echo(message, history, system_prompt, tokens):
         time.sleep(0.05)
         yield response[: i + 1]
 
-def launch():
+def launch(handler: Callable[[Any, Any, Any, Any], str]) -> None:
     demo = gr.ChatInterface(
-        echo,
+        handler,
         additional_inputs=[
-            gr.Textbox("You are helpful AI.", label="System Prompt"),
-            gr.Slider(10, 100),
         ],
     )
 
