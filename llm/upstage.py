@@ -1,12 +1,15 @@
-from langchain_upstage import ChatUpstage
 from os import environ
+from langchain_upstage import ChatUpstage
+from langchain_core.messages import HumanMessage, SystemMessage
 
 llm = ChatUpstage()
 
 def chat(message: str):
     try:
-        print(llm)
-        response = llm.invoke(message)
+        messages = [
+            HumanMessage(message)
+        ]
+        response = llm.invoke(messages)
         print(response)
 
         return response
