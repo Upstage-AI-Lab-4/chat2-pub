@@ -1,10 +1,13 @@
 from ui import page
+from llm.upstage import chat, name
 
 
 def model(input):
     return f'''
     TODO: model output string
     input: {input}
+    model: {name}
+    output: {chat(input).content}
     '''
 
 def load_template():
