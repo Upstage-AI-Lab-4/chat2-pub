@@ -1,6 +1,9 @@
+from chain.create_chat_text_chain import create_chat_text_chain
 from ui import page
-from llm.upstage import chat, name
+from llm.upstage import llm, name
 import logging
+
+chain = create_chat_text_chain(llm)
 
 def setLogger():
     """
@@ -10,13 +13,6 @@ def setLogger():
     logging.basicConfig()
     logging.getLogger('Langchain.retrievers.multi_query').setLevel(logging.ERROR)
 
-def model(input):
-    return f'''
-    TODO: model output string
-    input: {input}
-    model: {name}
-    output: {chat(input).content}
-    '''
 
 def load_template():
     """
@@ -25,7 +21,7 @@ def load_template():
     persona_memory에 Warren Buffet의 명언을 담은 docs를 반영하도록 설정하고,
     history에 기존 대화 전부를 저장하도록 설정하였습니다.
     """
-    template="""
+    template = """
         I want you to act like Warren Buffett, a famous American businessman and investor.
         I want you to make tone, manner, and the vocabulary
         of Donald Trump who is 45th American President would use.
@@ -44,8 +40,8 @@ def load_template():
         Smart Investor:
         """
     yield template
-    
-    
+
+
 def on_user_input(message, history, system_prompt, tokens):
     print(f'''
         message: {message}
@@ -54,8 +50,14 @@ def on_user_input(message, history, system_prompt, tokens):
         tokens: {tokens}
     ''')
 
-    yield model(message)
+    output = chain.invoke({'query': message, 'history': history})
 
+    return f'''
+    TODO: model output string
+    input: {message}
+    model: {name}
+    output: {output}
+    '''
 
 if __name__ == '__main__':
     page.launch(on_user_input)
