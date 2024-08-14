@@ -1,6 +1,7 @@
 from chain.create_chat_text_chain import create_chat_text_chain
 from ui import page
 from llm.upstage import llm, name
+from ui.stream_text import stream_text
 import logging
 
 chain = create_chat_text_chain(llm)
@@ -20,17 +21,10 @@ def on_user_input(message, history, system_prompt, tokens):
         system_prompt: {system_prompt}
         tokens: {tokens}
     ''')
-    
+
     setLogger()
 
-    output = chain.invoke({'query': message})
-
-    return f'''
-    TODO: model output string
-    input: {message}
-    model: {name}
-    output: {output}
-    '''
+    yield from stream_text(chain.stream({'query': message}))
 
 if __name__ == '__main__':
     page.launch(on_user_input)
