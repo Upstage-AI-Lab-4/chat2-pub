@@ -25,9 +25,6 @@ def create_chat_text_chain(llm):
                 'query': itemgetter('query'),
             }) | {
                         'answer': self.prompt_bot | self.llm | StrOutputParser(),
-                        'persona_memory': itemgetter('persona_memory'),
-                        'prompt': self.prompt_bot,
-                        'conversation': self.prompt_bot | history
                     }
 
             result = chain.invoke(params)
