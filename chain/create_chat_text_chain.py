@@ -5,7 +5,7 @@ from history.history import history
 from memory.memory import save_memory
 from template.buffet_trump import buffet_trump
 from operator import itemgetter
-from retriever.retriever import Retriever
+from retriever.retriever import retriever
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 
 def create_chat_text_chain(llm):
