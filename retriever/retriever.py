@@ -1,8 +1,9 @@
-from vector_store import VectorStore
+from indexting.vector_store import VectorStore
+
 
 class Retriever:
     def __init__(self):
-        
+        pass
         
 
     def retriever(self, vector_store, query):
