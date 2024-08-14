@@ -1,8 +1,3 @@
-#import os
-#from langchain_openai.embeddings import OpenAIEmbeddings
-from langchain_upstage import UpstageEmbeddings
-
-
 class Retriever:
     def __init__(self):
         
