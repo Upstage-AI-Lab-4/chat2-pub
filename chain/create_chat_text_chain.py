@@ -12,6 +12,13 @@ def create_chat_text_chain(llm):
     memory = save_memory()
     prompt_bot = buffet_trump()
 
+    def retrieve_(query):
+        print(f"Retrieve Persona Memory Query: {query}")
+        retriever = Retriever()
+        result = retriever.retriever(query=query)
+        print(f"Retrieved Persona Memory: {result}")
+        return result
+    
     class ChatTextChain:
         def __init__(self, llm, memory, prompt_bot):
             self.llm = llm
@@ -20,7 +27,7 @@ def create_chat_text_chain(llm):
 
         def stream(self, params):
             chain = RunnableParallel({
-                'persona_memory': itemgetter('query'), # retriever도 연결예정
+                'persona_memory': itemgetter('query') | RunnableLambda(retrieve_),  # retriever도 연결예정
                 'history': RunnableLambda(self.memory.load_memory_variables) | itemgetter('history'),
                 'query': itemgetter('query'),
             }) | {
