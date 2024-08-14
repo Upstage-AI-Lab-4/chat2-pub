@@ -24,7 +24,10 @@ def on_user_input(message, history, system_prompt, tokens):
 
     setLogger()
 
-    yield from stream_text(chain.stream({'query': message}))
+    yield from stream_text(chain.stream({
+        'query': message,
+        'history': history,
+    }))
 
 if __name__ == '__main__':
     page.launch(on_user_input)
