@@ -1,3 +1,5 @@
+from vector_store import VectorStore
+
 class Retriever:
     def __init__(self):
         
