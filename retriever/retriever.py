@@ -1,4 +1,4 @@
-from indexting.vector_store import VectorStore
+from indexing.vector_store import VectorStore
 
 
 class Retriever:
