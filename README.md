@@ -180,6 +180,7 @@ TESLA를 사랑한 서학개미
 
 ### 조성수
 - 자기소개
+  - 학사
   - 데이터 사이언스 전공
 - **역할**
   - `history` chatbot의 history 생성을 돕는 function 작성
