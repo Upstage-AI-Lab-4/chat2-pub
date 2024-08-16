@@ -50,7 +50,7 @@ TESLA를 사랑한 서학개미
 
 | **팀장** | **팀원 1** | **팀원 2** |                                                            **팀원 3**                                                             | **팀원 4** |
 | :------: |  :------: | :------: |:-------------------------------------------------------------------------------------------------------------------------------:| :------: |
-|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) | [<img src="https://avatars.githubusercontent.com/u/1223020?v=4" height=150 width=150> <br/> @deptno](https://github.com/deptno) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |
+|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/11969925?v=4" height=150 width=150> <br/> @misule0423](https://github.com/misule0423) | [<img src="https://avatars.githubusercontent.com/u/1223020?v=4" height=150 width=150> <br/> @deptno](https://github.com/deptno) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |
 </div>
 
 <br>
@@ -97,14 +97,46 @@ TESLA를 사랑한 서학개미
 ## 3. 프로젝트 구조
 ```
 ├── README.md
-├── .gitignore
-└── src
-     ├── App.py
-     ├── index.py
-     ├── api
-     │     └── GoogleAPI.jsx
-     └── styles
-           └── Globalstyled.jsx
+├── Pipfile
+├── Pipfile.lock
+├── requirements.txt
+├── main.py
+├── crawler
+│   └── TeslaStockData.py
+├── documents
+│   ├── tesla_info.txt
+│   ├── tesla_news.txt
+│   └── tesla_stock_prices.txt
+├── indexing
+│   ├── index.faiss
+│   ├── index.pkl
+│   └── vector_store.py
+├── retriever
+│   ├── retriever.py
+│   └── test.py
+├── history
+│   ├── __init__.py
+│   └── history.py
+├── logger
+│   ├── __init__.py
+│   └── logger.py
+├── memory
+│   ├── __init__.py
+│   └── memory.py
+├── chain
+│   ├── __init__.py
+│   └── create_chat_text_chain.py
+├── template
+│   ├── __init__.py
+│   └── buffet_trump.py
+├── llm
+│   ├── __init__.py
+│   ├── openai.py
+│   └── upstage.py
+└── ui
+    ├── __init__.py
+    ├── page.py
+    └── stream_text.py
 ...
 
 ```
@@ -127,11 +159,11 @@ TESLA를 사랑한 서학개미
     - 프로젝트를 진행하며 개발한 기능 작성
 <br>
 
-### 팀원 3
+### 이민석
 - **역할**
-    - 프로젝트를 진행하며 맡은 역할 작성
+    - 벡터 스토어 모듈 개발
 - **기능**
-    - 프로젝트를 진행하며 개발한 기능 작성
+    - 데이터 로딩 및 전처리(청킹), 임베딩 생성, 벡터 스토어 저장 및 로드
 <br>
 
 ### 이봉균
@@ -192,8 +224,8 @@ from langchain_openai import OpenAI
 ### 권희수
 - 하나의 공통된 주제로 팀원들과 co work을 통해 project를 완성하였다는 것에 감격을 느꼈고, 짧은 시간이었지만 다른 분들의 knowhow를 배울수 있어서 아주 유익한 시간이었습니다.
 
-### 팀원 2
-프로젝트 후기 작성
+### 이민석
+- 랭체인 프레임워크를 사용하여 RAG 시스템을 구축하면서 이론적으로 배운 내용을 실제로 구현해 보면서 전체 시스템을 개략적으로 이해할 수 있었습니다. 이 과정을 통해 RAG 시스템의 부족한 부분을 직접 확인하고, 이를 어떻게 해결할지에 대한 고민을 함꼐 나눌 수 있어서 좋았습니다.
 <br>
 
 ### 이봉균
