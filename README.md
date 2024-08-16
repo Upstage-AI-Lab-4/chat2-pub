@@ -203,34 +203,34 @@ TESLA를 사랑한 서학개미
 
 ### 작업 관리
 
-- 1. 아래와 같은 경고문구가 출력되었습니다.
+1. 아래와 같은 경고문구가 출력되었습니다.
 
 ```python
 \lib\site-packages\langchain_core\_api\deprecation.py:141: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 0.3.0. Use invoke instead.
 ```
 
-### 설명
+#### 설명
 
 - `BaseRetriever.get_relevant_documents` 메서드는 langchain-core 0.1.46에서 더 이상 사용되지 않으며, 0.3.0 버전에서 제거될 예정입니다.
 - 대신 `invoke` 메서드를 사용하세요.
 
 
-### 해결
+#### 해결
 
 - 기존 코드 : get_relevant_documents(query)
 - 수정 코드 : invoke(query)
 
 <br>
 
-- 2. 챗봇의 대화가 retrieve를 제대로 하지 못하는 현상 발견
+2. 챗봇의 대화가 retrieve를 제대로 하지 못하는 현상 발견
 
-### 설명
+#### 설명
 
 - 기존에는 사용자의 입력을 받고 RunnableLambda로 retrieve를 처리했었고, 이로 인해 간혹 retrieve를 제대로 하지 못하는 현상을 발견하여
 - 아래와 같이 하나의 람다식으로 중첩을 최소화하여 해결하였습니다.
 
 
-### 해결
+#### 해결
 
 - 기존 코드 : 'persona_memory': itemgetter('query') | RunnableLambda(self.retrieve_)
 - 수정 코드 : 'persona_memory': RunnableLambda(lambda p: Retriever().retriever(query=p['query']))
@@ -238,15 +238,15 @@ TESLA를 사랑한 서학개미
 
 <br>
 
-- 3. 챗봇의 대화가 사용자의 입력을 답변에도 반복하는 현상이 생겼습니다.
+3. 챗봇의 대화가 사용자의 입력을 답변에도 반복하는 현상이 생겼습니다.
 
-### 설명
+#### 설명
 
 - 기존에는 사용자의 입력을 받으면 memory에서 저장된 대화를 불러오고 템플릿의 history 부분을 파싱했지만, 이로 인해 간혹 사용자의 입력이 답변에도 출력이 되는 현상을 발견하여
 - 아래와 같이 람다식만 남김으로써 중첩을 최소화하여 해결하였습니다.
 
 
-### 해결
+#### 해결
 
 - 기존 코드 : 'history': RunnableLambda(self.memory.load_memory_variables) | itemgetter('history')
 - 수정 코드 : 'history': RunnableLambda(self.memory.load_memory_variables)
