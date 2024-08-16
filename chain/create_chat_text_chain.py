@@ -23,7 +23,7 @@ class ChatTextChain:
 
     def stream(self, params):
         chain = RunnableParallel({
-            'persona_memory': itemgetter('query') | RunnableLambda(self.retrieve_),  # retriever도 연결예정
+            'persona_memory': itemgetter('query') | RunnableLambda(self.retrieve_),
             'history': RunnableLambda(self.memory.load_memory_variables) | itemgetter('history'),
             'query': itemgetter('query'),
             }) | {
