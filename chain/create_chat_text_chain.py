@@ -14,17 +14,22 @@ class ChatTextChain:
         self.memory = Memory().save_memory()
         self.prompt_bot = Template().buffet_trump()
 
-    def retrieve_(self, query):
-        print(f"Retrieve Persona Memory Query: {query}")
-        retriever = Retriever()
-        result = retriever.retriever(query=query)
+    def print_retrieved_memory(self, result):
         print(f"Retrieved Persona Memory: {result}")
         return result
-
+    
     def stream(self, params):
+        '''
+        ### 트러블 슈팅 해결법
+        기존 : 'persona_memory': itemgetter('query') | RunnableLambda(self.retrieve_)
+        수정 : 'persona_memory': RunnableLambda(lambda p: Retriever().retriever(query=p['query']))
+        
+        기존 : 'history': RunnableLambda(self.memory.load_memory_variables) | itemgetter('history')
+        수정 : 'history': RunnableLambda(self.memory.load_memory_variables)
+        '''
         chain = RunnableParallel({
-            'persona_memory': itemgetter('query') | RunnableLambda(self.retrieve_),
-            'history': RunnableLambda(self.memory.load_memory_variables) | itemgetter('history'),
+            'persona_memory': RunnableLambda(lambda p: Retriever().retriever(query=p['query'])) | RunnableLambda(self.print_retrieved_memory),
+            'history': RunnableLambda(self.memory.load_memory_variables),
             'query': itemgetter('query'),
             }) | {
                 'answer': self.prompt_bot | self.llm | StrOutputParser(),

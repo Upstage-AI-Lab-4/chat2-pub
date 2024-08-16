@@ -17,8 +17,13 @@ class Retriever:
         
 
     def retriever(self, query):
+        '''
+        ### 트러블 슈팅 해결법
+        기존 : get_relevant_documents(query)
+        수정 : invoke(query)
+        '''
         retriever = self.vector_store.as_retriever(search_type="mmr", search_kwargs={"k": 3})
-        retriever_result = retriever.get_relevant_documents(query)
+        retriever_result = retriever.invoke(query) 
         new_result=[]
 
         for d in retriever_result:
