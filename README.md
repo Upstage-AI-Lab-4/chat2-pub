@@ -50,7 +50,7 @@ TESLA를 사랑한 서학개미
 
 | **팀장** | **팀원 1** | **팀원 2** |                                                            **팀원 3**                                                             | **팀원 4** |
 | :------: |  :------: | :------: |:-------------------------------------------------------------------------------------------------------------------------------:| :------: |
-|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/11969925?v=4" height=150 width=150> <br/> @misule0423](https://github.com/misule0423) | [<img src="https://avatars.githubusercontent.com/u/1223020?v=4" height=150 width=150> <br/> @deptno](https://github.com/deptno) |[<img src="https://avatars.githubusercontent.com/u/48382347?v=4?s=100" height=150 width=150> <br/> @chosungsu](https://github.com/chosungsu) |
+|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/165775145?v=4" height=150 width=150> <br/> @Github](https://github.com/jenny20240401) |[<img src="https://avatars.githubusercontent.com/u/11969925?v=4" height=150 width=150> <br/> @misule0423](https://github.com/misule0423) | [<img src="https://avatars.githubusercontent.com/u/1223020?v=4" height=150 width=150> <br/> @deptno](https://github.com/deptno) |[<img src="https://avatars.githubusercontent.com/u/48382347?v=4?s=100" height=150 width=150> <br/> @chosungsu](https://github.com/chosungsu) |
 </div>
 
 <br>
@@ -114,8 +114,7 @@ TESLA를 사랑한 서학개미
 │   ├── index.pkl
 │   └── vector_store.py
 ├── retriever
-│   ├── retriever.py
-│   └── test.py
+│   └── retriever.py
 ├── history
 │   ├── __init__.py
 │   └── history.py
@@ -154,11 +153,11 @@ TESLA를 사랑한 서학개미
     - yfinance, google을 통한 crawler 모듈 구현
 <br>
 
-### 팀원 2
+### 변혜영
 - **역할**
-    - 프로젝트를 진행하며 맡은 역할 작성
+    - Retriever 모듈 개발
 - **기능**
-    - 프로젝트를 진행하며 개발한 기능 작성
+    - 쿼리를 기반으로 벡터 스토어에서 문서를 검색하는 기능
 <br>
 
 ### 이민석
@@ -257,6 +256,9 @@ TESLA를 사랑한 서학개미
 
 ### 권희수
 - 하나의 공통된 주제로 팀원들과 co work을 통해 project를 완성하였다는 것에 감격을 느꼈고, 짧은 시간이었지만 다른 분들의 knowhow를 배울수 있어서 아주 유익한 시간이었습니다.
+
+### 변혜영
+- langchain 과 RAG를 사용해서 페르소나 챗봇을 만드는 프로젝트를 통해서 각자의 모듈을 합치고 기능적인 부분과 에러를 함께 고민하고 해결해가면서 많은 것을 배울 수 있었던 좋은 시간이었습니다. 
 
 ### 이민석
 - 랭체인 프레임워크를 사용하여 RAG 시스템을 구축하면서 이론적으로 배운 내용을 실제로 구현해 보면서 전체 시스템을 개략적으로 이해할 수 있었습니다. 이 과정을 통해 RAG 시스템의 부족한 부분을 직접 확인하고, 이를 어떻게 해결할지에 대한 고민을 함꼐 나눌 수 있어서 좋았습니다.

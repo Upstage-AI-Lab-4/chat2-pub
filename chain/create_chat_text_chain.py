@@ -5,7 +5,7 @@ from history.history import History
 from memory.memory import Memory
 from template.buffet_trump import Template
 from operator import itemgetter
-from retriever.retriever import Retriever
+from retriever.retriever import retriever
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 
 class ChatTextChain:
