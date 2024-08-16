@@ -25,18 +25,18 @@
 
 <div align="center">
 
-| **팀장** | **팀원 1** | **팀원 2** | **팀원 3** | **팀원 4** |
-| :------: |  :------: | :------: | :------: | :------: |
-|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |
+| **팀장** | **팀원 1** | **팀원 2** |                                                            **팀원 3**                                                             | **팀원 4** |
+| :------: |  :------: | :------: |:-------------------------------------------------------------------------------------------------------------------------------:| :------: |
+|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) | [<img src="https://avatars.githubusercontent.com/u/1223020?v=4" height=150 width=150> <br/> @deptno](https://github.com/deptno) |[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |
 </div>
 
 <br>
 
 ## 1. 개발 환경
 
-- 주 언어 : 
-- 버전 및 이슈관리 : 
-- 협업 툴 :
+- 주 언어 : python
+- 버전 및 이슈관리 : git
+- 협업 툴 : github
 
 <br>
 
@@ -62,13 +62,10 @@
   - 특정 종목의 배당 데이터를 얻기 위해 종목 검색 후, 관련 페이지로 이동해야 할 때, 이 과정을 자동화합니다. 
 
 ### 브랜치전략 
-    
 - 브랜치 전략
-  - Git-flow 전략을 기반으로 main, develop 브랜치와 feature 보조 브랜치를 운용했습니다.
-  - main, develop, Feat 브랜치로 나누어 개발을 하였습니다.
-    - **main** 브랜치는 배포 단계에서만 사용하는 브랜치입니다.
-    - **develop** 브랜치는 개발 단계에서 git-flow의 master 역할을 하는 브랜치입니다.
-    - **Feat** 브랜치는 기능 단위로 독립적인 개발 환경을 위하여 사용하고 merge 후 각 브랜치를 삭제해주었습니다.
+  - `git` 에 대한 지식 차이, 시간을 고려해서 `main` 브린치와 `feature` 브랜치 만을 운영했습니다.
+    - **main** 실행 가능한 상태를 유지합니다.
+    - **그외** 기능을 개발하고 완료되면 *pr* 을 통해 `main` 브랜치로 머지됩니다.
 
 
 <br>
@@ -113,11 +110,20 @@
     - 프로젝트를 진행하며 개발한 기능 작성
 <br>
 
+### 이봉균
+- **역할**
+  - git 관리
+- **기능**
+  - user input -> ui 결과 표시까지의, main flow 구현
+  - 모듈 디렉토리 스켈레톤 작성
+  - gradio 를 활용한 ui 작성
+<br>
+
 ## 5. 개발 기간 및 작업 관리
 
 ### 개발 기간
-- 전체 개발 기간 : 2024-08-12 ~ 2024-08-19
-- 기능 구현 : 2024-08-00 ~ 2024-08-00
+- 전체 개발 기간 : 2024-08-12 ~ 2024-08-16
+- 기능 구현 : 2024-08-12 ~ 2024-08-14
 - 그외 기간 작성
   
 <br>
@@ -163,3 +169,6 @@ from langchain_openai import OpenAI
 프로젝트 후기 작성
 <br>
 
+### 이봉균
+- `langchain` 이라는 하이레벨 프레임워크를 통해 rag 를 지원하는 프로젝트를 수행함으로써 전체 적인 플로우에 대한 이해를 가져갈 수 있어 이해에 도움이 되었습니다.
+<br>
