@@ -19,11 +19,11 @@ class Retriever:
     def retriever(self, query):
         retriever = self.vector_store.as_retriever(search_type="mmr", search_kwargs={"k": 3})
         retriever_result = retriever.get_relevant_documents(query)
+        new_result=[]
 
-        # for d in retriever_result:
-        #     print(d.page_content)
-        #     print("===") 
-        return retriever_result
+        for d in retriever_result:
+            new_result.append(d.page_content)
+        return '\n'.join(new_result)
         
 
        
