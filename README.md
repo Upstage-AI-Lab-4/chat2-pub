@@ -50,7 +50,7 @@ TESLA를 사랑한 서학개미
 
 | **팀장** | **팀원 1** | **팀원 2** |                                                            **팀원 3**                                                             | **팀원 4** |
 | :------: |  :------: | :------: |:-------------------------------------------------------------------------------------------------------------------------------:| :------: |
-|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/165775145?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/11969925?v=4" height=150 width=150> <br/> @misule0423](https://github.com/misule0423) | [<img src="https://avatars.githubusercontent.com/u/1223020?v=4" height=150 width=150> <br/> @deptno](https://github.com/deptno) |[<img src="https://avatars.githubusercontent.com/u/48382347?v=4?s=100" height=150 width=150> <br/> @chosungsu](https://github.com/chosungsu) |
+|[<img src="https://avatars.githubusercontent.com/u/156163982?v=4" height=150 width=150> <br/> @Github](https://github.com/) |[<img src="https://avatars.githubusercontent.com/u/165775145?v=4" height=150 width=150> <br/> @Github](https://github.com/jenny20240401) |[<img src="https://avatars.githubusercontent.com/u/11969925?v=4" height=150 width=150> <br/> @misule0423](https://github.com/misule0423) | [<img src="https://avatars.githubusercontent.com/u/1223020?v=4" height=150 width=150> <br/> @deptno](https://github.com/deptno) |[<img src="https://avatars.githubusercontent.com/u/48382347?v=4?s=100" height=150 width=150> <br/> @chosungsu](https://github.com/chosungsu) |
 </div>
 
 <br>
