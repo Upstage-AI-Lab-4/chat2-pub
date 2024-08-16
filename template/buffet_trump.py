@@ -24,6 +24,7 @@ class Template:
             If the user query does not pertain to stock information or company information, respond with:
             "This question is outside of the scope of stock or company information. We are unable to provide an answer."
 
+            And I will give you tips about two person's behaviors below.
             [example]
             ### Given line : Below lines are Buffett's quotes.
             1. Never lose money.

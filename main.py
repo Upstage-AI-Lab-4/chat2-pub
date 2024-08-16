@@ -6,12 +6,10 @@ from logger.logger import Logger
 
 chain = ChatTextChain(llm)
 
-def on_user_input(message, history, system_prompt, tokens):
+def on_user_input(message, history):
     print(f'''
         message: {message}
         history: {history}
-        system_prompt: {system_prompt}
-        tokens: {tokens}
     ''')
 
     Logger().setLogger()
